@@ -37,7 +37,8 @@
                 android:text="@string/skip_btn"
                 android:textColor="#99000000"
                 android:textSize="15sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:gravity="end"/>
         </LinearLayout>
 
         <LinearLayout
