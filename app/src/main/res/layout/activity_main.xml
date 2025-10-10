@@ -37,7 +37,7 @@
                 android:text="@string/skip_btn"
                 android:textColor="#99000000"
                 android:textSize="15sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
         </LinearLayout>
 
         <LinearLayout
@@ -49,7 +49,7 @@
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="wrap_content"
-                android:layout_height="353dp"
+                android:layout_height="388dp"
                 android:adjustViewBounds="true"
                 android:contentDescription="@string/app_name"
                 android:scaleType="fitCenter"
@@ -59,7 +59,7 @@
         <!-- Headings -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="109dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="vertical"
             android:padding="10dp">
@@ -72,8 +72,8 @@
                 android:letterSpacing="0.05"
                 android:lineSpacingExtra="6sp"
                 android:text="Track with ease"
-                android:textColor="@color/black"
-                android:textSize="25sp"
+                android:textColor="#616161"
+                android:textSize="28sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -83,16 +83,66 @@
                 android:fontFamily="@font/changaone_regular"
                 android:lineSpacingMultiplier="1.3"
                 android:text="Your Journey Starts Here"
-                android:textColor="#99000000"
+                android:textColor="#AAAAAA"
                 android:textSize="15sp"
                 android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <Button
+                android:id="@+id/swiper_btn_two"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="@color/primary"
+                android:fontFamily="@font/inter_variablefont_opsz_wght"
+                android:letterSpacing="0.1"
+                android:paddingVertical="10dp"
+                android:text="@string/next_btn"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/swiper_btn_one"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="@android:color/darker_gray"
+                android:fontFamily="@font/inter_variablefont_opsz_wght"
+                android:letterSpacing="0.1"
+                android:paddingVertical="10dp"
+                android:text="@string/next_btn"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/swiper_btn_three"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/darker_gray"
+                android:fontFamily="@font/inter_variablefont_opsz_wght"
+                android:letterSpacing="0.1"
+                android:paddingVertical="10dp"
+                android:text="@string/next_btn"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
         <!-- Next button section -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="203dp"
+            android:layout_height="145dp"
             android:gravity="center"
             android:padding="20dp">
 
@@ -103,7 +153,6 @@
                 android:backgroundTint="@color/primary"
                 android:fontFamily="@font/inter_variablefont_opsz_wght"
                 android:letterSpacing="0.1"
-                android:paddingVertical="10dp"
                 android:text="@string/next_btn"
                 android:textColor="@android:color/white"
                 android:textSize="15sp"
