@@ -18,10 +18,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:fontFamily="@font/inter_variablefont_opsz_wght"
-            android:textFontWeight="900"
-            android:textSize="40sp"
+            android:text="@string/splash_logo"
+            android:fontFamily="@font/changaone_regular"
+            android:textFontWeight="700"
+            android:textSize="70sp"
+            android:letterSpacing="0.05"
             android:textColor="@android:color/white" />
 
 
