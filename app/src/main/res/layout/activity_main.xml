@@ -17,6 +17,8 @@
         android:gravity="center">
 
         <!-- Skip button row -->
+
+        <!-- Image section -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -28,17 +30,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/inter_variablefont_opsz_wght"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="6dp"
                 android:text="@string/skip_btn"
                 android:textColor="#99000000"
                 android:textSize="15sp"
-                android:fontFamily="@font/inter_variablefont_opsz_wght"
-                android:textStyle="bold"
-                android:drawablePadding="8dp"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="6dp" />
+                android:textStyle="bold" />
         </LinearLayout>
 
-        <!-- Image section -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -58,7 +59,7 @@
         <!-- Headings -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="104dp"
+            android:layout_height="109dp"
             android:gravity="center"
             android:orientation="vertical"
             android:padding="10dp">
@@ -66,25 +67,25 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
                 android:fontFamily="@font/changaone_regular"
                 android:letterSpacing="0.05"
+                android:lineSpacingExtra="6sp"
                 android:text="Track with ease"
                 android:textColor="@color/black"
                 android:textSize="25sp"
-                android:textStyle="bold"
-                android:lineSpacingExtra="6sp"
-                android:layout_marginBottom="10sp"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/changaone_regular"
+                android:lineSpacingMultiplier="1.3"
                 android:text="Your Journey Starts Here"
                 android:textColor="#99000000"
                 android:textSize="15sp"
-                android:textStyle="normal"
-                android:lineSpacingMultiplier="1.3"/>
+                android:textStyle="normal" />
 
         </LinearLayout>
 
