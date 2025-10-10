@@ -1,19 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!-- Root vertical container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Skip button row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:padding="8dp">
+
+            <Button
+                android:id="@+id/skip_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="@string/skip_btn"
+                android:textColor="#99000000"
+                android:textSize="15sp"
+                android:fontFamily="@font/inter_variablefont_opsz_wght"
+                android:textStyle="bold"
+                android:drawablePadding="8dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="6dp" />
+        </LinearLayout>
+
+        <!-- Image section -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="353dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitCenter"
+                android:src="@drawable/home_screen" />
+        </LinearLayout>
+
+        <!-- Headings -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="104dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/changaone_regular"
+                android:letterSpacing="0.05"
+                android:text="Track with ease"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:lineSpacingExtra="6sp"
+                android:layout_marginBottom="10sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/changaone_regular"
+                android:text="Your Journey Starts Here"
+                android:textColor="#99000000"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                android:lineSpacingMultiplier="1.3"/>
+
+        </LinearLayout>
+
+        <!-- Next button section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="203dp"
+            android:gravity="center"
+            android:padding="20dp">
+
+            <Button
+                android:id="@+id/next_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/primary"
+                android:fontFamily="@font/inter_variablefont_opsz_wght"
+                android:letterSpacing="0.1"
+                android:paddingVertical="10dp"
+                android:text="@string/next_btn"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
