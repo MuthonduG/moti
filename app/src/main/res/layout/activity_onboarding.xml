@@ -35,7 +35,7 @@
             android:layout_marginBottom="15dp">
 
             <Button
-                android:id="@+id/buttonSkip"
+                android:id="@+id/buttonBack"
                 android:layout_width="145dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/primary"

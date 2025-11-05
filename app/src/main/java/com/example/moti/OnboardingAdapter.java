@@ -1,8 +1,12 @@
 package com.example.moti;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -43,12 +47,34 @@ public class OnboardingAdapter extends RecyclerView.Adapter<OnboardingAdapter.On
         private final ImageView imageOnboarding;
         private final TextView textTitle;
         private final TextView textDescription;
+        private final Button buttonSkip;
 
         OnboardingViewHolder(@NonNull View itemView) {
             super(itemView);
             imageOnboarding = itemView.findViewById(R.id.imageOnboarding);
             textTitle = itemView.findViewById(R.id.textTitle);
             textDescription = itemView.findViewById(R.id.textDescription);
+            buttonSkip = itemView.findViewById(R.id.buttonSkip);
+
+            // Skip button functionality
+            buttonSkip.setOnClickListener(v -> {
+                Context context = itemView.getContext();
+
+                // Save that onboarding is complete
+                SharedPreferences prefs = context.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putBoolean("isFirstRun", false);
+                editor.apply();
+
+                // Go to MainActivity
+                Intent intent = new Intent(context, MainActivity.class);
+                context.startActivity(intent);
+
+                // Close the onboarding activity
+                if (context instanceof OnboardingActivity) {
+                    ((OnboardingActivity) context).finish();
+                }
+            });
         }
 
         void bind(OnboardingItem item) {

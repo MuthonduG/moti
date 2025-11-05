@@ -14,7 +14,7 @@ import java.util.List;
 public class OnboardingActivity extends AppCompatActivity {
 
     private ViewPager2 onboardingViewPager;
-    private Button buttonNext, buttonSkip;
+    private Button buttonNext, buttonBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,7 @@ public class OnboardingActivity extends AppCompatActivity {
 
         onboardingViewPager = findViewById(R.id.onboardingViewPager);
         buttonNext = findViewById(R.id.buttonNext);
-        buttonSkip = findViewById(R.id.buttonSkip);
+        buttonBack = findViewById(R.id.buttonBack);
 
         setupOnboardingItems();
 
@@ -35,7 +35,15 @@ public class OnboardingActivity extends AppCompatActivity {
             }
         });
 
-        buttonSkip.setOnClickListener(v -> completeOnboarding());
+        buttonBack.setOnClickListener(v -> {
+            int currentItem = onboardingViewPager.getCurrentItem();
+            if (currentItem > 0) {
+                onboardingViewPager.setCurrentItem(currentItem - 1);
+            } else {
+                // Optional: exit or ignore if already at first page
+                finish();
+            }
+        });
     }
 
     private void setupOnboardingItems() {
@@ -53,7 +61,6 @@ public class OnboardingActivity extends AppCompatActivity {
         ));
         items.add(new OnboardingItem(
                 R.drawable.three,
-
                 "Improve Road Safety",
                 "Rate your driver or traffic experience and help improve road safety."
         ));
