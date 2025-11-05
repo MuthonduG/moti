@@ -44,18 +44,18 @@ public class OnboardingActivity extends AppCompatActivity {
         items.add(new OnboardingItem(
                 R.drawable.one,
                 "Welcome to Moti",
-                "Stay motivated and organized every day."
+                "Get the Moti App and access your travel logs from home."
         ));
         items.add(new OnboardingItem(
                 R.drawable.two,
-                "Track Progress",
-                "Monitor your goals and accomplishments."
+                "Track Your Journey",
+                "Monitor your every step within the day despite your travel model."
         ));
         items.add(new OnboardingItem(
                 R.drawable.three,
 
-                "Achieve More",
-                "Turn small steps into big success!"
+                "Improve Road Safety",
+                "Rate your driver or traffic experience and help improve road safety."
         ));
 
         onboardingViewPager.setAdapter(new OnboardingAdapter(items));

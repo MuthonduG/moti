@@ -28,7 +28,9 @@
             android:text="@string/skip_btn"
             android:textColor="#99000000"
             android:textSize="15sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:gravity="end"/>
+
     </LinearLayout>
 
     <ImageView
@@ -46,33 +48,39 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
 
         <TextView
             android:id="@+id/textTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="10dp"
             android:fontFamily="@font/changaone_regular"
             android:letterSpacing="0.05"
             android:lineSpacingExtra="6sp"
             android:text="Track with ease"
             android:textColor="#616161"
             android:textSize="28sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"/>
 
         <TextView
             android:id="@+id/textDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="10dp"
             android:fontFamily="@font/changaone_regular"
             android:lineSpacingMultiplier="1.3"
             android:text="Your Journey Starts Here"
             android:textColor="#AAAAAA"
             android:textSize="15sp"
             android:textStyle="normal"
-            android:textAlignment="center"/>
+            android:textAlignment="center"
+            />
     </LinearLayout>
 
 </LinearLayout>
