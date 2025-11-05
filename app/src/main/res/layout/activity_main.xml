@@ -25,7 +25,7 @@
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="wrap_content"
-                android:layout_height="388dp"
+                android:layout_height="337dp"
                 android:adjustViewBounds="true"
                 android:contentDescription="@string/app_name"
                 android:scaleType="fitCenter"
@@ -82,45 +82,108 @@
                 android:text="Sign Up"
                 android:textColor="@android:color/white"
                 android:textSize="15sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:elevation="15dp"
+                android:padding="10dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="10dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:text="Or"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@android:color/black" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/black" />
+
         </LinearLayout>
 
         <!-- Google Sign In button section -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="75dp"
             android:gravity="center"
             android:padding="20dp">
 
             <!-- Google button -->
             <LinearLayout
                 android:id="@+id/google_sign_in_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
+                android:layout_width="275dp"
+                android:layout_height="47dp"
                 android:layout_margin="16dp"
                 android:background="@android:color/transparent"
                 android:elevation="6dp"
-                android:paddingVertical="12dp"
-                android:paddingHorizontal="16dp">
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="12dp">
 
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/g"
+                    android:layout_marginEnd="8dp"
                     android:contentDescription="@string/app_name"
-                    android:layout_marginEnd="8dp" />
+                    android:src="@drawable/g" />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
+                    android:fontFamily="@font/inter_variablefont_opsz_wght"
                     android:text="Continue with Google"
                     android:textColor="@android:color/black"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/inter_variablefont_opsz_wght" />
+                    android:textStyle="bold" />
             </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_variablefont_opsz_wght"
+                android:text="Already have an account?"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_variablefont_opsz_wght"
+                android:text="Sign In"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"/>
 
         </LinearLayout>
 
