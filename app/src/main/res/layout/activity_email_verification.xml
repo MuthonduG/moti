@@ -6,43 +6,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".email_verification"
-    android:background="@color/white"
-    android:padding="20dp">
+    android:background="@color/white">
 
-    <!-- Top Background Image -->
+    <!-- Top Background Image - Same as login screen -->
     <ImageView
         android:id="@+id/background_image"
-        android:layout_width="330dp"
-        android:layout_height="294dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:contentDescription="Moti Logo"
         android:scaleType="centerCrop"
         android:src="@drawable/moti_location_logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.65"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- Verified Icon BELOW Background Image -->
-
-    <!-- Scrollable Content -->
-    <ImageView
-        android:id="@+id/verified_icon"
-        android:layout_width="174dp"
-        android:layout_height="154dp"
-        android:layout_marginTop="-70dp"
-        android:contentDescription="verified"
-        android:src="@drawable/done_all_24px"
-        android:tint="@color/primary_green"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/background_image" />
+        app:layout_constraintHeight_percent="0.9" />
 
+    <!-- Scrollable Content - Everything else goes here -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:fillViewport="true"
-        app:layout_constraintTop_toBottomOf="@id/verified_icon"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -52,42 +36,67 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:padding="16dp">
+            android:padding="16dp"
+            android:background="@android:color/transparent">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:text="Verified"
-                android:textAlignment="center"
-                android:textSize="25dp"/>
-
+            <!-- Space to push content below the image area -->
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="25dp"/>
+                android:layout_height="228dp" />
 
-            <TextView
+            <!-- Verified Icon -->
+            <ImageView
+                android:id="@+id/verified_icon"
+                android:layout_width="187dp"
+                android:layout_height="154dp"
+                android:background="@color/white"
+                android:contentDescription="verified"
+                android:src="@drawable/done_all_24px"
+                android:tint="@color/primary_green" />
+
+            <!-- Verification Content -->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/text_gray"
-                android:text="Your account has been verified successfully!"
-                android:textAlignment="center"
-                android:textSize="18dp"/>
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="16dp"
+                android:background="@android:color/transparent"
+                android:elevation="4dp"
+                android:layout_marginTop="16dp">
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="40dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Verified"
+                    android:textAlignment="center"
+                    android:textSize="25sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/white"/>
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/primary"
-                android:elevation="10dp"
-                android:padding="12dp"
-                android:text="Sign In"
-                android:textColor="@android:color/white"
-                android:textSize="15sp"
-                android:textStyle="bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_gray"
+                    android:text="Your account has been verified successfully!"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="24dp"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/primary"
+                    android:elevation="10dp"
+                    android:padding="12dp"
+                    android:text="Sign In"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
 
         </LinearLayout>
 

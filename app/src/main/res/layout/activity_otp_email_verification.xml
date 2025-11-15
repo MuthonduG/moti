@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.65"/>
+        app:layout_constraintHeight_percent="0.725"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -40,26 +40,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="142dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:gravity="start"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Welcome back to Moti 👋🏽"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/black"
-                    android:layout_marginBottom="16dp"
-                    android:textAlignment="textStart"/>
-            </LinearLayout>
-
+                android:layout_height="114dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -68,49 +49,129 @@
                 android:gravity="center"
                 android:orientation="vertical">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Email:"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:textColor="@color/label_color"/>
+
+                    <EditText
+                        android:id="@+id/email_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Email"
+                        android:padding="12dp"
+                        android:background="@drawable/rounded_edittext"
+                        android:inputType="textEmailAddress"
+                        android:layout_marginBottom="12dp"
+                        android:elevation="8dp"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@android:color/secondary_text_dark"/>
+                </LinearLayout>
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Email:"
+                    android:text="OTP:"
                     android:padding="10dp"
                     android:textStyle="bold"
                     android:textSize="15dp"
                     android:textColor="@color/label_color"/>
 
-                <EditText
-                    android:id="@+id/email_input"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:hint="Email"
-                    android:padding="12dp"
-                    android:background="@drawable/rounded_edittext"
-                    android:inputType="textEmailAddress"
-                    android:layout_marginBottom="12dp"
-                    android:elevation="8dp"
-                    android:textColor="@android:color/black"
-                    android:textColorHint="@android:color/secondary_text_dark"/>
-
-                <TextView
+                <LinearLayout
+                    android:id="@+id/otp_container"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Password:"
+                    android:gravity="center"
+                    android:orientation="horizontal"
                     android:padding="10dp"
-                    android:textStyle="bold"
-                    android:textSize="15dp"
-                    android:textColor="@color/label_color"/>
+                    android:weightSum="6">
 
-                <EditText
-                    android:id="@+id/password_input"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:hint="Password"
-                    android:padding="12dp"
-                    android:background="@drawable/rounded_edittext"
-                    android:inputType="textPassword"
-                    android:layout_marginBottom="16dp"
-                    android:elevation="8dp"
-                    android:textColor="@android:color/black"
-                    android:textColorHint="@android:color/secondary_text_dark"/>
+                    <!-- OTP BOXES (6 fields) -->
+                    <EditText
+                        android:id="@+id/otp_1"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:layout_margin="4dp"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textSize="22sp"
+                        android:background="@drawable/rounded_edittext" />
+
+                    <EditText
+                        android:id="@+id/otp_2"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:layout_margin="4dp"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textSize="22sp"
+                        android:background="@drawable/rounded_edittext" />
+
+                    <EditText
+                        android:id="@+id/otp_3"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:layout_margin="4dp"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textSize="22sp"
+                        android:background="@drawable/rounded_edittext" />
+
+                    <EditText
+                        android:id="@+id/otp_4"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:layout_margin="4dp"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textSize="22sp"
+                        android:background="@drawable/rounded_edittext" />
+
+                    <EditText
+                        android:id="@+id/otp_5"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:layout_margin="4dp"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textSize="22sp"
+                        android:background="@drawable/rounded_edittext" />
+
+                    <EditText
+                        android:id="@+id/otp_6"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:layout_margin="4dp"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textSize="22sp"
+                        android:background="@drawable/rounded_edittext" />
+                </LinearLayout>
+
+
+
             </LinearLayout>
 
             <LinearLayout
