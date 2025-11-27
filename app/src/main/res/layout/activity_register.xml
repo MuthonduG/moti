@@ -78,7 +78,7 @@
                     android:textColor="@color/label_color"/>
 
                 <EditText
-                    android:id="@+id/email_input"
+                    android:id="@+id/register_email_input"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:hint="Email"
@@ -100,6 +100,7 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/register_btn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/primary"

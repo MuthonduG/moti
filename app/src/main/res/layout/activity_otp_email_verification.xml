@@ -65,7 +65,7 @@
                         android:textColor="@color/label_color"/>
 
                     <EditText
-                        android:id="@+id/email_input"
+                        android:id="@+id/email_verification_input"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:hint="Email"
@@ -104,7 +104,7 @@
                         android:layout_weight="1"
                         android:layout_margin="4dp"
                         android:gravity="center"
-                        android:inputType="number"
+                        android:inputType="text"
                         android:maxLength="1"
                         android:textSize="22sp"
                         android:background="@drawable/rounded_edittext" />
@@ -116,7 +116,7 @@
                         android:layout_weight="1"
                         android:layout_margin="4dp"
                         android:gravity="center"
-                        android:inputType="number"
+                        android:inputType="text"
                         android:maxLength="1"
                         android:textSize="22sp"
                         android:background="@drawable/rounded_edittext" />
@@ -128,7 +128,7 @@
                         android:layout_weight="1"
                         android:layout_margin="4dp"
                         android:gravity="center"
-                        android:inputType="number"
+                        android:inputType="text"
                         android:maxLength="1"
                         android:textSize="22sp"
                         android:background="@drawable/rounded_edittext" />
@@ -140,7 +140,7 @@
                         android:layout_weight="1"
                         android:layout_margin="4dp"
                         android:gravity="center"
-                        android:inputType="number"
+                        android:inputType="text"
                         android:maxLength="1"
                         android:textSize="22sp"
                         android:background="@drawable/rounded_edittext" />
@@ -152,7 +152,7 @@
                         android:layout_weight="1"
                         android:layout_margin="4dp"
                         android:gravity="center"
-                        android:inputType="number"
+                        android:inputType="text"
                         android:maxLength="1"
                         android:textSize="22sp"
                         android:background="@drawable/rounded_edittext" />
@@ -164,7 +164,7 @@
                         android:layout_weight="1"
                         android:layout_margin="4dp"
                         android:gravity="center"
-                        android:inputType="number"
+                        android:inputType="text"
                         android:maxLength="1"
                         android:textSize="22sp"
                         android:background="@drawable/rounded_edittext" />
@@ -182,10 +182,11 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/verify_email_btn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/primary"
-                    android:text="Sign In"
+                    android:text="Verify Email"
                     android:textColor="@android:color/white"
                     android:textSize="15sp"
                     android:textStyle="bold"
