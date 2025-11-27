@@ -93,7 +93,7 @@ public class otp_email_verification extends AppCompatActivity {
                     runOnUiThread(() -> {
                         Toast.makeText(otp_email_verification.this, "Email Verified!", Toast.LENGTH_SHORT).show();
 
-                        Intent intent = new Intent(otp_email_verification.this, login.class);
+                        Intent intent = new Intent(otp_email_verification.this, email_verification.class);
                         startActivity(intent);
                         finish();
                     });
