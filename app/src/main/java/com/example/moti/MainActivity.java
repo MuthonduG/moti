@@ -32,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         initialSignup.setOnClickListener(v-> {
-           Intent intent = new Intent(MainActivity.this, register.class);
-           startActivity(intent);
+            Intent intent = new Intent(MainActivity.this, register.class);
+            startActivity(intent);
         });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

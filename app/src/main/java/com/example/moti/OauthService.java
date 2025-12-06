@@ -6,7 +6,7 @@ import okhttp3.*;
 
 public class OauthService {
 
-    private static final String BASE_URL = "https://42a982f87fe5.ngrok-free.app/moti/api/user_auth/";
+    private static final String BASE_URL = "https://b9ec58cdb006.ngrok-free.app/moti/api/user_auth/";
     private final OkHttpClient client = ApiClient.getClient();
     private final Gson gson = new Gson();
 

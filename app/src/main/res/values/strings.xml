@@ -3,4 +3,6 @@
     <string name="splash_logo">Track</string>
     <string name="skip_btn">Skip</string>
     <string name="next_btn">Next</string>
+    <string name="tomtom_api_key">8z0e5dK8VEnfhqKszJZjhjNIYKudrhJF</string>
+    <string name="location_permission_denied">Permission denied</string>
 </resources>

@@ -7,4 +7,11 @@
     <color name="primary_green">#009a00</color>
     <color name="secondary_green">#00b300</color>
     <color name="text_gray">#676767</color>
+
+    <!-- New colors for TripTracking -->
+    <color name="teal_700">#00796B</color>
+    <color name="green_700">#388E3C</color>
+    <color name="blue_700">#1976D2</color>
+    <color name="red_600">#E53935</color>
+    <color name="orange_500">#FF9800</color>
 </resources>

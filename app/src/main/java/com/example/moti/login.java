@@ -13,6 +13,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -79,15 +80,37 @@ public class login extends AppCompatActivity {
                     return;
                 }
 
-                LoginResponse loginResponse = new Gson().fromJson(json, LoginResponse.class);
+                // Parse the JSON response
+                Gson gson = new Gson();
+                JsonObject jsonObject = gson.fromJson(json, JsonObject.class);
+
+                // Extract token
+                String token = jsonObject.get("token").getAsString();
+                Log.d(TAG, "Token extracted: " + token.substring(0, Math.min(20, token.length())) + "...");
+
+                // Extract user data
+                JsonObject userObject = jsonObject.getAsJsonObject("user");
+                String userEmail = userObject.get("email").getAsString();
+                String motiId = userObject.get("moti_id").getAsString();
 
                 runOnUiThread(() -> {
                     Toast.makeText(login.this, "Login successful!", Toast.LENGTH_SHORT).show();
 
-                    getSharedPreferences("auth", MODE_PRIVATE)
+                    // ✅ FIX: Save to the SAME SharedPreferences file that Profile reads from
+                    getSharedPreferences("APP_PREFS", MODE_PRIVATE)
                             .edit()
-                            .putString("token", loginResponse.token)
+                            .putString("auth_token", token)
+                            .putString("user_email", userEmail)
+                            .putString("moti_id", motiId)
+                            .putBoolean("is_logged_in", true)
                             .apply();
+
+                    Log.d(TAG, "Token saved to APP_PREFS");
+
+                    // ✅ TEST: Verify it was saved
+                    String savedToken = getSharedPreferences("APP_PREFS", MODE_PRIVATE)
+                            .getString("auth_token", null);
+                    Log.d(TAG, "Token verification: " + (savedToken != null ? "Saved successfully" : "NOT SAVED!"));
 
                     // Redirect to next activity
                     Intent intent = new Intent(login.this, map_activity.class);
@@ -96,11 +119,5 @@ public class login extends AppCompatActivity {
                 });
             }
         });
-    }
-
-    private static class LoginResponse {
-        String token;
-        String message;
-        String user_id;
     }
 }

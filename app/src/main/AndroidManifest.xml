@@ -2,9 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <!-- Required for OSM tiles -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Location permissions -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Location permissions -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Storage permissions (optional but recommended for caching) -->
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
@@ -25,6 +26,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Moti"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
+            android:name=".TripHistory"
+            android:exported="false" />
+        <activity
+            android:name=".TripTracking"
+            android:exported="false" />
+        <activity
+            android:name=".RouteDetails"
+            android:exported="false" />
         <activity
             android:name=".map_activity"
             android:exported="false" />
